@@ -6,7 +6,7 @@
 <!-- default file list -->
 *Files to look at*:
 
-* [Startup.cs](./CS/PieChartGetStarted/Startup.cs)
+* [MauiProgram.cs](./CS/PieChartGetStarted/MauiProgram.cs)
 * [MainPage.xaml](./CS/PieChartGetStarted/MainPage.xaml)
 * [ViewModel.cs](./CS/PieChartGetStarted/ViewModel.cs)
 <!-- default file list end -->
