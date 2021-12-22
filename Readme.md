@@ -74,7 +74,7 @@ The following step-by-step tutorial details how to reproduce this application.
 
 ### Add a Pie Chart to the Main Page
 
-In the *MauiProgram.cs* file, register a handler for the DevExpress PieChartView:
+In the *MauiProgram.cs* file, call the **UseDevExpress** method to register a handler for the DevExpress PieChartView:
 
 ```cs
 using Microsoft.Maui;
@@ -89,9 +89,7 @@ namespace PieChartGetStarted {
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
-                .ConfigureMauiHandlers((handlers) => {
-                    handlers.AddHandler<PieChartView, PieChartViewHandler>();
-                })
+                .UseDevExpress()
                 .ConfigureFonts(fonts => {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                 });
