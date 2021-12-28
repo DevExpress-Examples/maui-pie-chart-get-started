@@ -54,7 +54,7 @@ The [PieChartView](https://docs.devexpress.com/MAUI/DevExpress.Maui.Charts.PieCh
 ## How to Run This Application
 
 1. Install Visual Studio 2022 and the latest .NET MAUI version. See the following topic on docs.microsoft.com for more information: [.NET MAUI Installation](https://docs.microsoft.com/en-gb/dotnet/maui/get-started/installation).
-1. Register the following NuGet feed in Visual Studio: **https://nuget.devexpress.com/free/api**.
+1. Register the following NuGet feed in Visual Studio: `https://nuget.devexpress.com/free/api`.
     > If you are an active [DevExpress Universal](https://www.devexpress.com/subscriptions/universal.xml) customer, DevExpress Controls for .NET MAUI are available in your [personal NuGet feed](https://nuget.devexpress.com).
 
 ## How to Reproduce This Application
@@ -74,7 +74,7 @@ The following step-by-step tutorial details how to reproduce this application.
 
 ### Add a Pie Chart to the Main Page
 
-In the *MauiProgram.cs* file, register a handler for the DevExpress PieChartView:
+In the *MauiProgram.cs* file, call the **UseDevExpress** method to register handlers for the `PieChartView` and other DevExpress controls:
 
 ```cs
 using Microsoft.Maui;
@@ -89,9 +89,7 @@ namespace PieChartGetStarted {
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
-                .ConfigureMauiHandlers((handlers) => {
-                    handlers.AddHandler<PieChartView, PieChartViewHandler>();
-                })
+                .UseDevExpress()
                 .ConfigureFonts(fonts => {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                 });

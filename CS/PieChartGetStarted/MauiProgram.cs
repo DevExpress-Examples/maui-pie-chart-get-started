@@ -3,6 +3,7 @@ using Microsoft.Maui.Hosting;
 using Microsoft.Maui.Controls.Hosting;
 using DevExpress.Maui.Charts;
 using PieChartGetStarted;
+using DevExpress.Maui;
 
 namespace PieChartGetStarted {
     public static class MauiProgram {
@@ -10,9 +11,7 @@ namespace PieChartGetStarted {
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
-                .ConfigureMauiHandlers((handlers) => {
-                    handlers.AddHandler<PieChartView, PieChartViewHandler>();
-                })
+                .UseDevExpress()
                 .ConfigureFonts(fonts => {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                 });
